@@ -192,7 +192,7 @@ export default function App() {
               </div>
 
               <p className="mt-6 text-lg text-gray-400">
-                We are a crew of thoughtful creatives who’ve been crafting killer videos.
+                We are a crew of thoughtful creatives who’ve been crafting killer videos
               </p>
             </div>
 
