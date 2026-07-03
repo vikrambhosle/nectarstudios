@@ -204,9 +204,9 @@ export default function App() {
       <section className="py-24 bg-[#1a1b21] border-t border-gray-800 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">We Make Videos That Work</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Translating human feeling into visual art</h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Translating human feeling into visual art.
+              We Make Videos That Work
             </p>
           </div>
 
