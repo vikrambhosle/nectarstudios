@@ -94,10 +94,10 @@ export default function App() {
     <div className="antialiased selection:bg-[#c8f542] selection:text-[#0f1014] min-h-screen flex flex-col bg-[#0f1014] text-[#f1faee] overflow-x-hidden">
       <nav className="fixed w-full z-50 glass-nav" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center gap-3 h-18 sm:h-20">
             <div className="shrink-0 flex items-center">
               <img
-                className="h-12 w-auto object-contain"
+                className="h-8 sm:h-12 w-auto object-contain"
                 src="nectar logo.jpg"
                 alt="Nectar Studios"
                 width="120"
@@ -109,7 +109,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View our work on Instagram"
-              className="bg-white text-[#0f1014] px-5 py-2 text-sm md:px-6 md:text-base rounded-full font-bold hover:bg-[#c8f542] transition-colors duration-200 transform hover:scale-105 active:scale-95"
+              className="shrink-0 bg-white text-[#0f1014] px-4 py-2 text-xs sm:px-5 sm:text-sm md:px-6 md:text-base rounded-full font-bold hover:bg-[#c8f542] transition-colors duration-200 transform hover:scale-105 active:scale-95"
             >
               Our Work
             </a>
@@ -117,19 +117,20 @@ export default function App() {
         </div>
       </nav>
 
-      <main className="grow relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+      <main className="grow relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-linear-to-br from-[#4c4390] via-[#1d2031] to-[#5ecaae]">
         <div
-          className="bg-blob w-96 h-96 rounded-full top-0 left-[-10%] animate-blob mix-blend-screen pointer-events-none"
-          style={{ background: '#7b6e81' }}
+          className="bg-blob w-104 h-104 rounded-full top-[-5%] left-[-10%] animate-blob mix-blend-screen pointer-events-none"
+          style={{ background: '#6d5df0', opacity: 0.36 }}
         />
         <div
-          className="bg-blob w-96 h-96 rounded-full bottom-0 right-[-10%] animate-blob animation-delay-2000 mix-blend-screen pointer-events-none"
-          style={{ background: '#c8f542' }}
+          className="bg-blob w-md h-112 rounded-full bottom-[-8%] right-[-10%] animate-blob animation-delay-2000 mix-blend-screen pointer-events-none"
+          style={{ background: '#67dcb8', opacity: 0.34 }}
         />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.09),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(103,220,184,0.1),transparent_30%)] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 flex flex-col justify-center animate-fade-in-up">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 items-center min-h-[calc(100vh-9rem)]">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-center animate-fade-in-up">
               <p className="text-[#c8f542] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Nectar Studios
               </p>
@@ -158,7 +159,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 animate-fade-in-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
+            <div className="lg:col-span-7 xl:col-span-7 animate-fade-in-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
               <div className="video-container">
                 <iframe
                   src={YT_EMBED_URL}
