@@ -7,7 +7,7 @@ const YT_EMBED_URL =
 
 const heroTexts = [
   'Our own IP. Short films and animated series built from pure creative vision.',
-  'Brand videos - but only for brands that genuinely excite us. Nothing random.',
+  'Brand videos - for brands that excite.',
   'VFX collabs with indie filmmakers and musicians pushing creative limits.',
 ];
 
@@ -22,7 +22,7 @@ const segments = [
   },
   {
     number: '02',
-    tag: 'Selective Partnerships',
+    tag: 'Partnerships',
     title: 'Brand Videos',
     subtitle: 'For Brands That Excite Us',
     description:
