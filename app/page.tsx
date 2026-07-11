@@ -1,5 +1,9 @@
 import React from 'react';
 
+// ─── Constants ──────────────────────────────────────────────────────────────────
+const INSTAGRAM_URL = 'https://www.instagram.com/nectar_studios/';
+const YT_THUMBNAIL  = 'https://img.youtube.com/vi/1rGw4sCnt3A/maxresdefault.jpg';
+
 export default function App() {
   const heroTexts = [
     "Creative Lab that crafts powerful stories and visual effects.",
@@ -8,110 +12,14 @@ export default function App() {
   ];
 
   return (
-    <div className="antialiased selection:bg-[#e63946] selection:text-white min-h-screen flex flex-col bg-[#0f1014] text-[#f1faee] font-sans overflow-x-hidden">
-      {/* Global & Custom Styles Injection */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap');
-        
-        body {
-          background-color: #0f1014;
-          font-family: 'Montserrat', sans-serif;
-        }
-        
-        .font-display {
-          font-family: 'Syne', sans-serif;
-        }
-
-        /* Custom scrollbar for webkit */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f1014; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
-
-        .glass-nav {
-          background: rgba(15, 16, 20, 0.85);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Video/Showreel container styling */
-        .video-container {
-          position: relative;
-          width: 100%;
-          padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-          border-radius: 1rem;
-          overflow: hidden;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .video-container img, .video-container iframe, .video-container video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .alternating-text-container {
-          position: relative;
-          min-height: 180px; 
-        }
-        
-        .alt-text-anim {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          opacity: 0;
-          animation: textCycle 18s infinite ease-in-out;
-        }
-
-        .alt-text-anim:nth-child(1) { animation-delay: 0s; }
-        .alt-text-anim:nth-child(2) { animation-delay: 6s; }
-        .alt-text-anim:nth-child(3) { animation-delay: 12s; }
-
-        @keyframes textCycle {
-            0% { opacity: 0; transform: translateY(10px); pointer-events: none; }
-            5% { opacity: 1; transform: translateY(0); pointer-events: auto; }
-            28% { opacity: 1; transform: translateY(0); pointer-events: auto; }
-            33% { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-            100% { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-        }
-
-        .bg-blob {
-          position: absolute;
-          filter: blur(80px);
-          z-index: 0;
-          opacity: 0.4;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-        }
-
-        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-        .animate-blob { animation: blob 7s infinite; }
-        .animation-delay-2000 { animation-delay: 2s; }
-      `}} />
+    <div className="antialiased selection:bg-[#e63946] selection:text-white min-h-screen flex flex-col bg-linear-to-br from-[#0d0d1a] via-[#0f1014] to-[#0a0a12] text-[#f1faee] overflow-x-hidden">
 
       {/* Navigation */}
       <nav className="fixed w-full z-50 glass-nav">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center cursor-pointer">
+            <div className="shrink-0 flex items-center cursor-pointer">
               <img 
                 className="h-12 w-auto object-contain" 
                 src="nectar logo.jpg" 
@@ -119,36 +27,26 @@ export default function App() {
               />
             </div>
             
-            {/* Right side action button */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a 
-                href="https://www.instagram.com/nectar_studios/" 
-                target="_blank" 
-                rel="noreferrer"
-                className="bg-white text-[#0f1014] px-6 py-2 rounded-full font-bold hover:bg-gray-200 transition-colors transform hover:scale-105 active:scale-95 duration-200"
-              >
-                Our Reel
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button className="text-[#f1faee] hover:text-white focus:outline-none">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-              </button>
-            </div>
+            {/* CTA — visible on all screen sizes */}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View our work on Instagram"
+              className="bg-white text-[#0f1014] px-5 py-2 text-sm md:px-6 md:text-base rounded-full font-bold hover:bg-gray-200 transition-colors transform hover:scale-105 active:scale-95 duration-200"
+            >
+              Our Work
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <main className="flex-grow relative pt-24 md:pt-32 pb-16 md:pb-32 overflow-hidden">
+      <main className="grow relative pt-24 md:pt-32 pb-16 md:pb-32 overflow-hidden">
         
         {/* Ambient Background Effects */}
-        <div className="bg-blob bg-blue-900 w-96 h-96 rounded-full top-0 left-[-10%] animate-blob mix-blend-screen pointer-events-none"></div>
-        <div className="bg-blob bg-purple-900 w-96 h-96 rounded-full bottom-0 right-[-10%] animate-blob animation-delay-2000 mix-blend-screen pointer-events-none"></div>
+        <div className="bg-blob w-96 h-96 rounded-full top-0 left-[-10%] animate-blob mix-blend-screen pointer-events-none" style={{background: '#7b6e81'}}></div>
+        <div className="bg-blob w-96 h-96 rounded-full bottom-0 right-[-10%] animate-blob animation-delay-2000 mix-blend-screen pointer-events-none" style={{background: '#c8f542'}}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -169,11 +67,17 @@ export default function App() {
 
             {/* Right Column: Showreel/Video */}
             <div className="lg:col-span-6 animate-fade-in-up mt-12 lg:mt-0" style={{ animationDelay: '0.2s' }}>
-              <a href="https://www.instagram.com/nectar_studios/" target="_blank" rel="noreferrer" className="video-container group cursor-pointer block">
-                {/* Placeholder for the actual showreel */}
-                <img 
-                  src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                  alt="Nectar Showreel Poster" 
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Nectar Studios 2026 Showreel on Instagram"
+                className="video-container group cursor-pointer block"
+              >
+                {/* YouTube thumbnail — clicking goes to Instagram */}
+                <img
+                  src={YT_THUMBNAIL}
+                  alt="Nectar Studios 2026 Showreel"
                   className="transition-transform duration-700 group-hover:scale-105"
                 />
                 
@@ -188,11 +92,16 @@ export default function App() {
               </a>
               <div className="mt-4 flex justify-between items-center text-sm text-gray-500 font-semibold tracking-wide">
                 <span>▶ 2026 Showreel</span>
-                <span>01:45</span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z" clipRule="evenodd"/>
+                  </svg>
+                  View on Instagram
+                </span>
               </div>
 
               <p className="mt-6 text-lg text-gray-400">
-                We are a crew of thoughtful creatives who’ve been crafting killer videos
+                We are a crew of creatives who craft videos using the magic of VFX and animation!
               </p>
             </div>
 
@@ -201,47 +110,65 @@ export default function App() {
       </main>
 
       {/* Services/Capabilities Text Section */}
-      <section className="py-24 bg-[#1a1b21] border-t border-gray-800 relative z-10">
+      <section className="py-24 bg-[#c8f542] border-t border-[#b0d93c] relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Translating human feeling into visual art</h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              We Make Videos That Work
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-[#0f1014]">We Make Videos That Work!</h2>
+            <p className="text-[#1a1b21] text-lg leading-relaxed font-medium">
+              Animation. Stop Motion. VFX.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {/* Service Item 1 */}
-            <div className="p-8 rounded-2xl bg-[#0f1014] border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-                </svg>
+            <div
+              className="rounded-2xl border border-gray-800 hover:border-gray-600 transition-colors duration-300 relative overflow-hidden"
+              style={{backgroundImage: 'url("https://images.unsplash.com/photo-1598153346810-860daa814c4b?auto=format&fit=crop&w=800&q=80")', backgroundSize: 'cover', backgroundPosition: 'center'}}
+            >
+              <div className="absolute inset-0 bg-black/75" />
+              <div className="relative z-10 p-8">
+                <div className="w-12 h-12 bg-gray-800/80 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Animation</h3>
+                <p className="text-gray-400 text-sm">From blank canvas to custom worlds. Driven by motion, text, and pure imagination.</p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Animation</h3>
-              <p className="text-gray-400 text-sm">From blank canvas to custom worlds. Driven by motion, text, and pure imagination.</p>
             </div>
 
             {/* Service Item 2 */}
-            <div className="p-8 rounded-2xl bg-[#0f1014] border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
+            <div
+              className="rounded-2xl border border-gray-800 hover:border-gray-600 transition-colors duration-300 relative overflow-hidden"
+              style={{backgroundImage: 'url("https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80")', backgroundSize: 'cover', backgroundPosition: 'center'}}
+            >
+              <div className="absolute inset-0 bg-black/75" />
+              <div className="relative z-10 p-8">
+                <div className="w-12 h-12 bg-gray-800/80 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Stop Motion</h3>
+                <p className="text-gray-400 text-sm">Bringing inanimate objects to life, frame by frame. Patient craft meets raw creativity.</p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Live Action</h3>
-              <p className="text-gray-400 text-sm">Let's get to set, roll cameras and make some video magic.</p>
             </div>
 
             {/* Service Item 3 */}
-            <div className="p-8 rounded-2xl bg-[#0f1014] border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                </svg>
+            <div
+              className="rounded-2xl border border-gray-800 hover:border-gray-600 transition-colors duration-300 relative overflow-hidden"
+              style={{backgroundImage: 'url("https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=800&q=80")', backgroundSize: 'cover', backgroundPosition: 'center'}}
+            >
+              <div className="absolute inset-0 bg-black/75" />
+              <div className="relative z-10 p-8">
+                <div className="w-12 h-12 bg-gray-800/80 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">VFX</h3>
+                <p className="text-gray-400 text-sm">Visual wizardry that blurs the line between real and impossible. We make scenes that can't be filmed.</p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Mixed Media</h3>
-              <p className="text-gray-400 text-sm">Blend live action and Computer-generated imagery to achieve the impossible</p>
             </div>
           </div>
         </div>
