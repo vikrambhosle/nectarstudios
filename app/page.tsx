@@ -7,7 +7,7 @@ const YT_EMBED_URL =
 
 const heroTexts = [
   'Our own IP. Short films and animated series built from pure creative vision.',
-  'Brand videos - for brands that excite.',
+  'Breathtaking visuals and storytelling that make your brand impossible to forget.',
   'VFX collabs with indie filmmakers and musicians pushing creative limits.',
 ];
 
