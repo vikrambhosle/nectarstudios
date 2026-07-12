@@ -98,11 +98,11 @@ export default function App() {
             <div className="shrink-0 flex items-center">
               <img
                 className="h-8 sm:h-12 w-auto object-contain"
-                src="nectar logo.png"
+                src="nectar logo.jpg"
                 alt="Nectar Studios"
                 width="120"
                 height="48"
-                style={{ mixBlendMode: 'screen', background: 'transparent' }}
+                
               />
             </div>
             <a
