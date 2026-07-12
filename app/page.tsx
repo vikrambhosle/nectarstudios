@@ -102,6 +102,7 @@ export default function App() {
                 alt="Nectar Studios"
                 width="120"
                 height="48"
+                style={{ mixBlendMode: 'screen', background: 'transparent' }}
               />
             </div>
             <a
