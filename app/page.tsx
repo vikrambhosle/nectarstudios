@@ -196,7 +196,7 @@ export default function App() {
           <div className="mb-16">
             <p className="text-[#c8f542] text-xs font-bold tracking-[0.25em] uppercase mb-4">Who We Create For</p>
             <h2 id="segments-heading" className="font-display text-3xl md:text-4xl font-bold text-white max-w-xl leading-tight">
-              Three crafts.<br />All impactful.
+              Three crafts. All impactful.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border border-gray-800">
