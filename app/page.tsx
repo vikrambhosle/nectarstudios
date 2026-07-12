@@ -129,7 +129,7 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.09),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(103,220,184,0.1),transparent_30%)] pointer-events-none" />
 
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 items-center min-h-[calc(100vh-9rem)]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center lg:min-h-[calc(100vh-9rem)]">
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-center animate-fade-in-up">
               <p className="text-[#c8f542] text-xs font-bold tracking-[0.25em] uppercase mb-6">
                 Nectar Studios
