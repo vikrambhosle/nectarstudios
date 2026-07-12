@@ -26,7 +26,7 @@ const segments = [
     title: 'Brand Videos',
     subtitle: 'For Brands That Excite Us',
     description:
-      "We don't take every job. We work with brands whose stories are worth telling - and we bring the same creative energy we'd give our own projects.",
+      "We work with brands whose stories are worth telling - and we bring the same creative energy we'd give our own projects.",
   },
   {
     number: '03',
@@ -70,7 +70,7 @@ const workSteps = [
   {
     step: '01',
     title: 'Brief',
-    description: 'You tell us the vision. We listen - really listen - before we say a word.',
+    description: 'You tell us the vision',
   },
   {
     step: '02',
@@ -159,7 +159,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 xl:col-span-7 animate-fade-in-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
+            <div className="lg:col-span-7 xl:col-span-7 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="video-container">
                 <iframe
                   src={YT_EMBED_URL}
@@ -168,7 +168,7 @@ export default function App() {
                   allowFullScreen
                 />
               </div>
-              <div className="mt-4 flex justify-between items-center text-sm text-gray-500 font-semibold tracking-wide">
+              <div className="flex justify-between items-center text-sm text-gray-500 font-semibold tracking-wide">
                 <span>Play 2026 Showreel</span>
                 <a
                   href={INSTAGRAM_URL}
@@ -196,7 +196,7 @@ export default function App() {
           <div className="mb-16">
             <p className="text-[#c8f542] text-xs font-bold tracking-[0.25em] uppercase mb-4">Who We Create For</p>
             <h2 id="segments-heading" className="font-display text-3xl md:text-4xl font-bold text-white max-w-xl leading-tight">
-              Three kinds of work.<br />All of them real.
+              Three crafts.<br />All impactful.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border border-gray-800">
@@ -222,7 +222,7 @@ export default function App() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-[#1a1b21]/50 text-xs font-bold tracking-[0.25em] uppercase mb-4">Our Craft</p>
             <h2 id="services-heading" className="font-display text-3xl md:text-4xl font-bold text-[#0f1014]">
-              We Make Videos That Work!
+              Translating human feeling into visual art.
             </h2>
             <p className="text-[#1a1b21]/70 text-lg mt-4 font-medium">Animation. Stop Motion. VFX.</p>
           </div>
