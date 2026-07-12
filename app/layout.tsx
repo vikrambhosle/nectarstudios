@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     siteName: 'Nectar Studios',
     title: 'Nectar Studios | Web Series, Ad Films, Corporate Videos & Music Production Mumbai',
     description:
-      'Web series production house and OTT content producers in Mumbai and Pune. Ad films, corporate videos, music videos, short films for streaming platforms. Affordable production, animation, VFX, and line production services.'
+      'Web series production house and OTT content producers in Mumbai and Pune. Ad films, corporate videos, music videos, short films for streaming platforms. Affordable production, animation, VFX, and line production services.',
     images: [
       {
         url: 'https://img.youtube.com/vi/1rGw4sCnt3A/maxresdefault.jpg',
@@ -112,14 +112,6 @@ export const metadata: Metadata = {
         alt: 'Nectar Studios 2026 Showreel',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nectar Studios | Animation, Stop Motion & VFX',
-    description:
-      'We are a crew of creatives who craft videos using the magic of VFX and animation.',
-    images: ['https://img.youtube.com/vi/1rGw4sCnt3A/maxresdefault.jpg'],
-    creator: '@nectar_studios',
   },
 };
 
