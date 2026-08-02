@@ -21,7 +21,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   metadataBase: new URL('https://nectarstudios.in'),
   title: {
-    default: 'Nectar Studios | Ad Films, Corporate Videos & Music Video Production in Mumbai',
+    default: 'Nectar Studios | Animation, VFX, Stop Motion & Mixed Media Production Studio in Mumbai and Pune',
     template: '%s | Nectar Studios',
   },
   description:
