@@ -121,7 +121,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Nectar Studios',
   url: 'https://nectarstudios.in',
-  logo: 'https://nectarstudios.in/nectar-logo.jpg',
+  logo: 'https://nectarstudios.in/nectar-logo.png',
   description:
     'Creative video production studio specialising in animation, stop motion, and VFX.',
   sameAs: ['https://www.instagram.com/nectar_studios/'],

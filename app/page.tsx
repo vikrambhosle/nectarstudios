@@ -1,9 +1,7 @@
 ﻿import React from 'react';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/nectar_studios/';
-const YT_EMBED_URL =
-  'https://www.youtube.com/embed/1rGw4sCnt3A' +
-  '?autoplay=1&mute=1&loop=1&playlist=1rGw4sCnt3A&rel=0&modestbranding=1&playsinline=1&controls=1';
+const SHOWREEL_URL = '/showreel.mp4';
 
 const heroTexts = [
   'Our own IP. Short films and animated series built from pure creative vision.',
@@ -161,11 +159,15 @@ export default function App() {
 
             <div className="lg:col-span-7 xl:col-span-7 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="video-container">
-                <iframe
-                  src={YT_EMBED_URL}
+                <video
+                  src={SHOWREEL_URL}
                   title="Nectar Studios 2026 Showreel"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="flex justify-between items-center text-sm text-gray-500 font-semibold tracking-wide">
@@ -312,7 +314,7 @@ export default function App() {
             <div className="flex flex-col items-center md:items-start gap-2">
               <img
                 className="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300"
-                src="nectar logo.jpg"
+                src="nectar logo.png"
                 alt="Nectar Studios"
                 width="80"
                 height="32"
