@@ -97,12 +97,11 @@ export default function App() {
           <div className="flex justify-between items-center gap-3 h-18 sm:h-20">
             <div className="shrink-0 flex items-center">
               <img
-                className="h-8 sm:h-12 w-auto object-contain"
+                className="h-10 sm:h-16 w-auto object-contain"
                 src="nectar logo.png"
                 alt="Nectar Studios"
-                width="120"
-                height="48"
-                
+                width="160"
+                height="64"
               />
             </div>
             <a
