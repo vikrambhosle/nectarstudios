@@ -82,6 +82,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Nectar Studios', url: 'https://nectarstudios.in' }],
   creator: 'Nectar Studios',
   publisher: 'Nectar Studios',
+  icons: {
+    icon: '/nectar_ico.ico',
+    shortcut: '/nectar_ico.ico',
+    apple: '/nectar_ico.ico',
+  },
   robots: {
     index: true,
     follow: true,
