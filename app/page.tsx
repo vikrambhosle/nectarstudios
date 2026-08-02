@@ -107,7 +107,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View our work on Instagram"
-              className="shrink-0 bg-white text-[#0f1014] px-4 py-2 text-xs sm:px-5 sm:text-sm md:px-6 md:text-base rounded-full font-bold hover:bg-[#c8f542] transition-colors duration-200 transform hover:scale-105 active:scale-95"
+              className="shrink-0 bg-[#c8f542] text-[#0f1014] px-4 py-2 text-xs sm:px-5 sm:text-sm md:px-6 md:text-base rounded-full font-bold hover:bg-white transition-colors duration-200 transform hover:scale-105 active:scale-95"
             >
               Our Work
             </a>
