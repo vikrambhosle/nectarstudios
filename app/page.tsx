@@ -6,7 +6,7 @@ const SHOWREEL_URL = '/showreel.mp4';
 const heroTexts = [
   'Our own IP. Short films and animated series built from pure creative vision.',
   'Breathtaking visuals and storytelling that make your brand impossible to forget.',
-  'VFX collabs with indie filmmakers and musicians pushing creative limits.',
+  'VFX & 3D rendering digital mirrors of products , places and processes',
 ];
 
 const segments = [
@@ -28,11 +28,11 @@ const segments = [
   },
   {
     number: '03',
-    tag: 'VFX and Animation',
-    title: 'Creative Collabs',
-    subtitle: 'Indie Filmmakers and Musicians',
+    tag: 'VFX and Digital Twins',
+    title: 'VFX & Digital Twins',
+    subtitle: 'Digital Replicas of Products, systems and processes,
     description:
-      "VFX, animation, and mixed-media for indie directors and musicians who want to push the visual envelope. If your vision is bold, let's talk.",
+      "VFX, animation, and mixed-media ",
   },
 ];
 
@@ -44,14 +44,6 @@ const services = [
       'https://images.unsplash.com/photo-1598153346810-860daa814c4b?auto=format&fit=crop&w=800&q=80',
     iconPath:
       'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z',
-  },
-  {
-    title: 'Stop Motion',
-    description: 'Bringing inanimate objects to life, frame by frame. Patient craft meets raw creativity.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80',
-    iconPath:
-      'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z',
   },
   {
     title: 'VFX',
