@@ -30,7 +30,7 @@ const segments = [
     number: '03',
     tag: 'VFX and Digital Twins',
     title: 'VFX & Digital Twins',
-    subtitle: 'Digital Replicas of Products, systems and processes,
+    subtitle: 'Digital Replicas of Products, systems and processes',
     description:
       "VFX, animation, and mixed-media ",
   },
